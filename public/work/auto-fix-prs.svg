@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Jira-to-Draft PR Agentic Workflow</title>
+  <desc id="desc">Flow diagram showing an agentic workflow that turns Jira tickets into read-only deep dives and guarded draft pull requests with human review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7FAFC"/>
+      <stop offset="54%" stop-color="#F2F7FB"/>
+      <stop offset="100%" stop-color="#EEF6F1"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#123B5D"/>
+      <stop offset="58%" stop-color="#225E73"/>
+      <stop offset="100%" stop-color="#2F6F54"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#102A43" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#35657A"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2D7A55"/>
+    </marker>
+    <style>
+      .page { fill: url(#bg); }
+      .header { fill: url(#header); }
+      .title { font: 700 44px Arial, sans-serif; fill: #FFFFFF; letter-spacing: 0; }
+      .subtitle { font: 400 20px Arial, sans-serif; fill: #DDEBF2; letter-spacing: 0; }
+      .phaseLabel { font: 700 18px Arial, sans-serif; fill: #1F4E79; letter-spacing: 0.4px; }
+      .phaseRule { stroke: #9DB6C8; stroke-width: 2; }
+      .card { fill: #FFFFFF; stroke: #CAD8E3; stroke-width: 1.5; rx: 18; filter: url(#shadow); }
+      .cardBlue { fill: #F5FAFE; stroke: #B8D0E0; }
+      .cardGreen { fill: #F4FBF6; stroke: #B8DCC5; }
+      .cardGold { fill: #FFF9EA; stroke: #E5C875; }
+      .cardRed { fill: #FFF5F3; stroke: #E3B6AC; }
+      .num { font: 700 15px Arial, sans-serif; fill: #FFFFFF; }
+      .numCircle { fill: #1F4E79; }
+      .numCircleGreen { fill: #2D7A55; }
+      .numCircleGold { fill: #9A6B00; }
+      .h { font: 700 20px Arial, sans-serif; fill: #183B56; letter-spacing: 0; }
+      .body { font: 400 15px Arial, sans-serif; fill: #334E68; letter-spacing: 0; }
+      .small { font: 400 13px Arial, sans-serif; fill: #536B7B; letter-spacing: 0; }
+      .pill { fill: #E9F2F8; stroke: #B8D0E0; stroke-width: 1; rx: 13; }
+      .pillGreen { fill: #E9F7EE; stroke: #B8DCC5; }
+      .pillGold { fill: #FFF3CD; stroke: #E5C875; }
+      .pillText { font: 700 12px Arial, sans-serif; fill: #27485B; letter-spacing: 0.2px; }
+      .arrow { fill: none; stroke: #35657A; stroke-width: 3; marker-end: url(#arrow); }
+      .arrowGreen { fill: none; stroke: #2D7A55; stroke-width: 3; marker-end: url(#arrowGreen); }
+      .arrowDash { fill: none; stroke: #7B8794; stroke-width: 2.5; stroke-dasharray: 8 8; marker-end: url(#arrow); }
+      .guardBand { fill: #17324D; rx: 20; filter: url(#shadow); }
+      .guardTitle { font: 700 20px Arial, sans-serif; fill: #FFFFFF; }
+      .guardText { font: 400 14px Arial, sans-serif; fill: #DDEBF2; }
+      .caption { font: 400 14px Arial, sans-serif; fill: #607080; }
+    </style>
+  </defs>
+
+  <rect class="page" x="0" y="0" width="1600" height="1050"/>
+  <rect class="header" x="0" y="0" width="1600" height="150"/>
+  <text class="title" x="70" y="72">Jira-to-Draft PR Agentic Workflow</text>
+  <text class="subtitle" x="72" y="110">A human-gated AI system that turns support and development tickets into source-backed analysis, a scoped fix, and a draft pull request for review.</text>
+  <text class="subtitle" x="1245" y="58" font-size="14">Portfolio artifact</text>
+  <text class="subtitle" x="1245" y="84" font-size="14">Sanitized architecture view</text>
+
+  <text class="phaseLabel" x="70" y="195">1. Intake and Evidence</text>
+  <line class="phaseRule" x1="70" y1="208" x2="520" y2="208"/>
+  <text class="phaseLabel" x="590" y="195">2. Read-Only Deep Dive</text>
+  <line class="phaseRule" x1="590" y1="208" x2="1035" y2="208"/>
+  <text class="phaseLabel" x="1110" y="195">3. Guarded Draft PR</text>
+  <line class="phaseRule" x1="1110" y1="208" x2="1530" y2="208"/>
+
+  <!-- Row 1 -->
+  <g transform="translate(70,235)">
+    <rect class="card cardBlue" width="250" height="145"/>
+    <circle class="numCircle" cx="28" cy="30" r="17"/><text class="num" x="24" y="35">1</text>
+    <text class="h" x="58" y="35">Jira Ticket</text>
+    <text class="body" x="28" y="70">New DEV/MKM/DIG ticket,</text>
+    <text class="body" x="28" y="91">linked support context,</text>
+    <text class="body" x="28" y="112">comments, labels, and</text>
+    <text class="body" x="28" y="133">attachments.</text>
+  </g>
+
+  <path class="arrow" d="M 320 307 C 350 307, 360 307, 390 307"/>
+
+  <g transform="translate(390,235)">
+    <rect class="card" width="250" height="145"/>
+    <circle class="numCircle" cx="28" cy="30" r="17"/><text class="num" x="24" y="35">2</text>
+    <text class="h" x="58" y="35">Queue + Routing</text>
+    <text class="body" x="28" y="70">Webhook or polling</text>
+    <text class="body" x="28" y="91">stages a run, applies</text>
+    <text class="body" x="28" y="112">project/module routing,</text>
+    <text class="body" x="28" y="133">and avoids duplicates.</text>
+  </g>
+
+  <path class="arrow" d="M 640 307 C 675 307, 688 307, 720 307"/>
+
+  <g transform="translate(720,235)">
+    <rect class="card cardBlue" width="300" height="145"/>
+    <circle class="numCircle" cx="28" cy="30" r="17"/><text class="num" x="24" y="35">3</text>
+    <text class="h" x="58" y="35">Evidence Assembly</text>
+    <text class="body" x="28" y="70">Pulls Jira context, linked</text>
+    <text class="body" x="28" y="91">support tickets, read-only</text>
+    <text class="body" x="28" y="112">repo mirrors, logs, schemas,</text>
+    <text class="body" x="28" y="133">and product playbooks.</text>
+  </g>
+
+  <path class="arrow" d="M 1020 307 C 1055 307, 1072 307, 1105 307"/>
+
+  <g transform="translate(1105,235)">
+    <rect class="card cardGreen" width="300" height="145"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="17"/><text class="num" x="24" y="35">4</text>
+    <text class="h" x="58" y="35">AI Deep Dive</text>
+    <text class="body" x="28" y="70">Generates ticket summary,</text>
+    <text class="body" x="28" y="91">likely root cause, files to</text>
+    <text class="body" x="28" y="112">inspect, proposed fix, tests,</text>
+    <text class="body" x="28" y="133">and verification checklist.</text>
+  </g>
+
+  <!-- Gates row -->
+  <path class="arrowGreen" d="M 1255 380 C 1255 420, 1255 432, 1255 468"/>
+
+  <g transform="translate(1025,470)">
+    <rect class="card cardGold" width="460" height="150"/>
+    <circle class="numCircleGold" cx="28" cy="30" r="17"/><text class="num" x="24" y="35">5</text>
+    <text class="h" x="58" y="35">Confidence + Safety Gates</text>
+    <text class="body" x="28" y="70">Blocks terminal tickets, low-confidence analysis,</text>
+    <text class="body" x="28" y="92">generic output, duplicate posts, stale repo mirrors,</text>
+    <text class="body" x="28" y="114">and app-error reports without log evidence.</text>
+    <rect class="pill pillGold" x="28" y="124" width="126" height="26"/><text class="pillText" x="43" y="142">read-only phase</text>
+    <rect class="pill pillGold" x="168" y="124" width="155" height="26"/><text class="pillText" x="184" y="142">no code changes</text>
+  </g>
+
+  <path class="arrowGreen" d="M 1025 545 C 930 545, 905 545, 810 545"/>
+
+  <g transform="translate(520,470)">
+    <rect class="card cardGreen" width="290" height="150"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="17"/><text class="num" x="24" y="35">6</text>
+    <text class="h" x="58" y="35">Developer Handoff</text>
+    <text class="body" x="28" y="70">Posts an internal Jira</text>
+    <text class="body" x="28" y="92">comment plus a Markdown</text>
+    <text class="body" x="28" y="114">attachment with source</text>
+    <text class="body" x="28" y="136">citations and next steps.</text>
+  </g>
+
+  <path class="arrowDash" d="M 665 620 C 665 685, 720 705, 795 705"/>
+
+  <g transform="translate(795,670)">
+    <rect class="card cardGold" width="300" height="150"/>
+    <circle class="numCircleGold" cx="28" cy="30" r="17"/><text class="num" x="24" y="35">7</text>
+    <text class="h" x="58" y="35">Explicit Human Trigger</text>
+    <text class="body" x="28" y="70">Allowed operator comments</text>
+    <text class="body" x="28" y="91">"fix" after reviewing the</text>
+    <text class="body" x="28" y="112">deep-dive findings for a</text>
+    <text class="body" x="28" y="133">hand-picked ticket.</text>
+  </g>
+
+  <path class="arrowGreen" d="M 1095 735 C 1128 735, 1140 735, 1172 735"/>
+
+  <g transform="translate(1172,670)">
+    <rect class="card cardBlue" width="300" height="150"/>
+    <circle class="numCircle" cx="28" cy="30" r="17"/><text class="num" x="24" y="35">8</text>
+    <text class="h" x="58" y="35">Scoped Checkout</text>
+    <text class="body" x="28" y="70">Creates a clean writable</text>
+    <text class="body" x="28" y="91">branch from the approved</text>
+    <text class="body" x="28" y="112">base repo, separate from</text>
+    <text class="body" x="28" y="133">read-only mirrors.</text>
+  </g>
+
+  <!-- Bottom row -->
+  <path class="arrowGreen" d="M 1322 800 C 1322 840, 1265 850, 1215 850"/>
+
+  <g transform="translate(910,850)">
+    <rect class="card cardGreen" width="305" height="135"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="17"/><text class="num" x="20" y="35">9</text>
+    <text class="h" x="58" y="35">Fix Agent</text>
+    <text class="body" x="28" y="70">Implements the minimal</text>
+    <text class="body" x="28" y="91">change from the report,</text>
+    <text class="body" x="28" y="112">runs available checks, or</text>
+    <text class="body" x="28" y="133">falls back to findings-only.</text>
+  </g>
+
+  <path class="arrowGreen" d="M 910 918 C 875 918, 860 918, 825 918"/>
+
+  <g transform="translate(520,850)">
+    <rect class="card cardRed" width="305" height="135"/>
+    <circle class="numCircleGold" cx="28" cy="30" r="17"/><text class="num" x="20" y="35">10</text>
+    <text class="h" x="62" y="35">Guardrail Check</text>
+    <text class="body" x="28" y="70">Enforces repo/ticket/author</text>
+    <text class="body" x="28" y="91">allow-lists, path deny-lists,</text>
+    <text class="body" x="28" y="112">diff-size caps, token safety,</text>
+    <text class="body" x="28" y="133">and no auto-merge.</text>
+  </g>
+
+  <path class="arrowGreen" d="M 520 918 C 485 918, 468 918, 435 918"/>
+
+  <g transform="translate(130,850)">
+    <rect class="card cardGreen" width="305" height="135"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="17"/><text class="num" x="20" y="35">11</text>
+    <text class="h" x="62" y="35">Draft PR</text>
+    <text class="body" x="28" y="70">Bot commits and pushes,</text>
+    <text class="body" x="28" y="91">opens or refreshes a draft</text>
+    <text class="body" x="28" y="112">pull request, then links it</text>
+    <text class="body" x="28" y="133">back to Jira.</text>
+  </g>
+
+  <path class="arrowDash" d="M 282 850 C 282 795, 365 818, 520 786"/>
+  <text class="small" x="300" y="835">review feedback revises same branch/PR</text>
+
+  <!-- Guardrail band -->
+  <g transform="translate(70,655)">
+    <rect class="guardBand" width="650" height="165"/>
+    <text class="guardTitle" x="30" y="38">Human control and safety model</text>
+    <text class="guardText" x="30" y="72">Defaults to read-only analysis. Code generation requires an explicit</text>
+    <text class="guardText" x="30" y="96">allowed-user command on a hand-picked ticket.</text>
+    <text class="guardText" x="30" y="122">Every change is bounded by allow-lists, denied paths, diff caps,</text>
+    <text class="guardText" x="30" y="146">bot identity, draft-only PRs, and human review.</text>
+  </g>
+</svg>

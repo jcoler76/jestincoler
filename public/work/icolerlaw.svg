@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Law-Firm Client &amp; Payments Platform</title>
+  <desc id="desc">Architecture diagram of a California Chapter 7 bankruptcy law firm platform covering bilingual client intake, document automation, client portal with e-signature, dual-processor payments, and an AI bilingual content engine.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7FAFC"/>
+      <stop offset="54%" stop-color="#F2F7FB"/>
+      <stop offset="100%" stop-color="#EEF6F1"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#123B5D"/>
+      <stop offset="58%" stop-color="#225E73"/>
+      <stop offset="100%" stop-color="#2F6F54"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#102A43" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#35657A"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2D7A55"/>
+    </marker>
+    <style>
+      .page { fill: url(#bg); }
+      .header { fill: url(#header); }
+      .title { font: 700 44px Arial, sans-serif; fill: #FFFFFF; }
+      .subtitle { font: 400 19px Arial, sans-serif; fill: #DDEBF2; }
+      .meta { font: 400 14px Arial, sans-serif; fill: #DDEBF2; }
+      .phaseLabel { font: 700 18px Arial, sans-serif; fill: #1F4E79; letter-spacing: 0.4px; }
+      .phaseRule { stroke: #9DB6C8; stroke-width: 2; }
+      .card { fill: #FFFFFF; stroke: #CAD8E3; stroke-width: 1.5; rx: 16; filter: url(#shadow); }
+      .cardBlue { fill: #F5FAFE; stroke: #B8D0E0; }
+      .cardGreen { fill: #F4FBF6; stroke: #B8DCC5; }
+      .cardGold { fill: #FFF9EA; stroke: #E5C875; }
+      .cardAI { fill: #F3F0FA; stroke: #BDB0DC; }
+      .num { font: 700 14px Arial, sans-serif; fill: #FFFFFF; }
+      .numCircle { fill: #1F4E79; }
+      .numCircleGreen { fill: #2D7A55; }
+      .numCircleGold { fill: #9A6B00; }
+      .numCircleAI { fill: #5B3FA6; }
+      .h { font: 700 19px Arial, sans-serif; fill: #183B56; }
+      .hsm { font: 700 16px Arial, sans-serif; fill: #183B56; }
+      .body { font: 400 14px Arial, sans-serif; fill: #334E68; }
+      .small { font: 400 12.5px Arial, sans-serif; fill: #536B7B; }
+      .pill { fill: #E9F2F8; stroke: #B8D0E0; stroke-width: 1; rx: 13; }
+      .pillGreen { fill: #E9F7EE; stroke: #B8DCC5; }
+      .pillAI { fill: #EDE8F7; stroke: #BDB0DC; stroke-width: 1; rx: 13; }
+      .pillText { font: 700 12px Arial, sans-serif; fill: #27485B; }
+      .pillTextAI { font: 700 12px Arial, sans-serif; fill: #3D2A7A; }
+      .arrow { fill: none; stroke: #35657A; stroke-width: 3; marker-end: url(#arrow); }
+      .arrowGreen { fill: none; stroke: #2D7A55; stroke-width: 3; marker-end: url(#arrowGreen); }
+      .band { fill: #17324D; rx: 18; filter: url(#shadow); }
+      .bandTitle { font: 700 19px Arial, sans-serif; fill: #FFFFFF; }
+      .bandText { font: 400 14px Arial, sans-serif; fill: #DDEBF2; }
+      .chip { fill: #21496B; rx: 13; }
+      .chipText { font: 700 13px Arial, sans-serif; fill: #EAF3FA; }
+      .aiLane { fill: #EDE8F7; stroke: #BDB0DC; stroke-width: 2; rx: 18; }
+      .aiLaneTitle { font: 700 16px Arial, sans-serif; fill: #3D2A7A; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="page" x="0" y="0" width="1600" height="1050"/>
+
+  <!-- Header band -->
+  <rect class="header" x="0" y="0" width="1600" height="150"/>
+  <text class="title" x="70" y="70">Law-Firm Client &amp; Payments Platform</text>
+  <text class="subtitle" x="72" y="108">Client intake, document automation, e-signature, dual-processor payments, and an AI bilingual content engine &#8212; for a California Chapter 7 bankruptcy practice.</text>
+  <text class="meta" x="1270" y="55">Portfolio artifact</text>
+  <text class="meta" x="1270" y="79">React &#183; GraphQL &#183; Stripe/Square</text>
+
+  <!-- ===== PHASE 1: CLIENT INTAKE ===== -->
+  <text class="phaseLabel" x="70" y="190">1. Client Intake &amp; Onboarding</text>
+  <line class="phaseRule" x1="70" y1="203" x2="500" y2="203"/>
+
+  <g transform="translate(70,218)">
+    <rect class="card cardGreen" width="400" height="145" rx="16"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">1</text>
+    <text class="h" x="56" y="36">Guided Intake Form</text>
+    <text class="body" x="22" y="70">Bilingual (EN/ES) multi-step wizard</text>
+    <text class="body" x="22" y="92">collects client contact info, case</text>
+    <text class="body" x="22" y="114">details, assets, and debts.</text>
+    <rect class="pillGreen" x="22" y="124" width="120" height="24" rx="12"/><text class="pillText" x="36" y="140">React / GraphQL</text>
+  </g>
+
+  <!-- ===== PHASE 2: DOCUMENT AUTOMATION ===== -->
+  <text class="phaseLabel" x="520" y="190">2. Document Automation</text>
+  <line class="phaseRule" x1="520" y1="203" x2="1030" y2="203"/>
+
+  <path class="arrow" d="M 470 290 C 492 290, 505 290, 520 290"/>
+
+  <g transform="translate(520,218)">
+    <rect class="card cardBlue" width="460" height="145" rx="16"/>
+    <circle class="numCircle" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">2</text>
+    <text class="h" x="56" y="36">Template Merge Engine</text>
+    <text class="body" x="22" y="70">Intake data merged into firm-</text>
+    <text class="body" x="22" y="92">authored Word templates; rendered</text>
+    <text class="body" x="22" y="114">to PDF via headless LibreOffice.</text>
+    <rect class="pill" x="22" y="124" width="148" height="24" rx="12"/><text class="pillText" x="36" y="140">docxtemplater</text>
+    <rect class="pill" x="178" y="124" width="160" height="24" rx="12"/><text class="pillText" x="192" y="140">headless LibreOffice</text>
+  </g>
+
+  <!-- ===== PHASE 3: CLIENT PORTAL + E-SIGN ===== -->
+  <text class="phaseLabel" x="1040" y="190">3. Client Portal &amp; E-Signature</text>
+  <line class="phaseRule" x1="1040" y1="203" x2="1530" y2="203"/>
+
+  <path class="arrow" d="M 980 290 C 1002 290, 1020 290, 1040 290"/>
+
+  <g transform="translate(1040,218)">
+    <rect class="card cardGreen" width="488" height="145" rx="16"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">3</text>
+    <text class="h" x="56" y="36">Secure Client Portal</text>
+    <text class="body" x="22" y="70">JWT + 2FA login; clients review</text>
+    <text class="body" x="22" y="92">documents, e-sign, and track case</text>
+    <text class="body" x="22" y="114">status. Files stored in S3.</text>
+    <rect class="pillGreen" x="22" y="124" width="88" height="24" rx="12"/><text class="pillText" x="36" y="140">JWT + 2FA</text>
+    <rect class="pillGreen" x="118" y="124" width="96" height="24" rx="12"/><text class="pillText" x="132" y="140">E-Signature</text>
+    <rect class="pillGreen" x="222" y="124" width="48" height="24" rx="12"/><text class="pillText" x="236" y="140">S3</text>
+  </g>
+
+  <!-- ===== PHASE 4: PAYMENTS ===== -->
+  <!-- Phase label row 2 -->
+  <text class="phaseLabel" x="70" y="420">4. Payments</text>
+  <line class="phaseRule" x1="70" y1="433" x2="370" y2="433"/>
+
+  <!-- Arrows down from row 1 -->
+  <path class="arrow" d="M 270 363 C 270 381, 270 394, 270 450"/>
+  <path class="arrow" d="M 750 363 C 750 381, 750 394, 750 450"/>
+  <path class="arrow" d="M 1284 363 C 1284 381, 1284 394, 1284 450"/>
+
+  <g transform="translate(70,448)">
+    <rect class="card cardGold" width="680" height="165" rx="16"/>
+    <circle class="numCircleGold" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">4</text>
+    <text class="h" x="56" y="36">Dual-Processor Payments</text>
+    <text class="body" x="22" y="72">Stripe and Square both integrated;</text>
+    <text class="body" x="22" y="94">firm routes by case type. Supports</text>
+    <text class="body" x="22" y="116">one-time, payment plans, and auto-pay</text>
+    <text class="body" x="22" y="138">with scheduled SMS/email reminders.</text>
+    <rect class="pillAI" x="22" y="148" width="80" height="24" rx="12"/><text class="pillTextAI" x="36" y="164">Stripe</text>
+    <rect class="pillAI" x="110" y="148" width="80" height="24" rx="12"/><text class="pillTextAI" x="124" y="164">Square</text>
+    <rect class="pill" x="198" y="148" width="144" height="24" rx="12"/><text class="pillText" x="212" y="164">Payment Plans</text>
+    <rect class="pill" x="350" y="148" width="96" height="24" rx="12"/><text class="pillText" x="364" y="164">Auto-Pay</text>
+    <rect class="pill" x="454" y="148" width="148" height="24" rx="12"/><text class="pillText" x="468" y="164">Dashboards</text>
+  </g>
+
+  <!-- ===== AI CONTENT ENGINE (distinct lane) ===== -->
+  <!-- Lane background -->
+  <rect class="aiLane" x="790" y="436" width="748" height="200" rx="18"/>
+  <text class="aiLaneTitle" x="814" y="464">AI Content Engine</text>
+
+  <g transform="translate(808,472)">
+    <rect class="card cardAI" width="706" height="148" rx="16"/>
+    <circle class="numCircleAI" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">5</text>
+    <text class="h" x="56" y="34">Bilingual Publishing Automation</text>
+    <text class="body" x="22" y="68">On a cron schedule, Claude drafts bilingual</text>
+    <text class="body" x="22" y="90">(EN/ES) posts on filing Chapter 7 in California.</text>
+    <text class="body" x="22" y="112">Posts auto-published to Facebook; firm reviews</text>
+    <text class="body" x="22" y="134">in a dashboard before or after publication.</text>
+  </g>
+
+  <!-- ===== PLATFORM BAR (dark band, bottom) ===== -->
+  <g transform="translate(70,660)">
+    <rect class="band" width="1458" height="80" rx="18"/>
+    <text class="bandTitle" x="28" y="34">Platform</text>
+    <rect class="chip" x="130" y="14" width="320" height="34" rx="13"/>
+    <text class="chipText" x="148" y="36">GraphQL (Apollo) &#183; PostgreSQL (Prisma)</text>
+    <rect class="chip" x="462" y="14" width="140" height="34" rx="13"/>
+    <text class="chipText" x="480" y="36">Railway</text>
+    <rect class="chip" x="614" y="14" width="290" height="34" rx="13"/>
+    <text class="chipText" x="630" y="36">email (SMTP + IMAP)</text>
+    <rect class="chip" x="916" y="14" width="100" height="34" rx="13"/>
+    <text class="chipText" x="930" y="36">Claude</text>
+  </g>
+
+  <!-- ===== DATA FLOW (additional detail row) ===== -->
+  <!-- Intake -> Case record -->
+  <path class="arrowGreen" d="M 270 448 L 270 444"/>
+
+  <!-- Arrows between phase 1,2,3 boxes down to platform bar -->
+  <path class="arrow" d="M 270 613 C 270 636, 270 648, 270 660"/>
+  <path class="arrow" d="M 750 613 C 750 636, 750 648, 750 660"/>
+  <path class="arrow" d="M 1284 613 C 1284 636, 1284 648, 1284 660"/>
+
+  <!-- Arrows from row 2 phase cards down to platform bar -->
+  <path class="arrow" d="M 410 613 C 410 636, 410 648, 410 660"/>
+  <path class="arrowGreen" d="M 1163 636 C 1163 648, 1163 655, 1163 660"/>
+
+  <!-- ===== FEATURE DETAIL CARDS (row 3) ===== -->
+  <text class="phaseLabel" x="70" y="784">Platform Capabilities</text>
+  <line class="phaseRule" x1="70" y1="797" x2="640" y2="797"/>
+
+  <g transform="translate(70,812)">
+    <rect class="card cardBlue" width="336" height="148" rx="16"/>
+    <text class="hsm" x="22" y="40">Case Management</text>
+    <text class="body" x="22" y="68">Status tracking from intake</text>
+    <text class="body" x="22" y="90">through filing, discharge, and</text>
+    <text class="body" x="22" y="112">close-out. Attorney dashboard</text>
+    <text class="body" x="22" y="134">with case timeline.</text>
+  </g>
+
+  <g transform="translate(426,812)">
+    <rect class="card cardBlue" width="336" height="148" rx="16"/>
+    <text class="hsm" x="22" y="40">Document Library</text>
+    <text class="body" x="22" y="68">Generated packets stored per</text>
+    <text class="body" x="22" y="90">case in S3; version-tracked.</text>
+    <text class="body" x="22" y="112">Client and attorney each see</text>
+    <text class="body" x="22" y="134">their own permission scope.</text>
+  </g>
+
+  <g transform="translate(782,812)">
+    <rect class="card cardGreen" width="336" height="148" rx="16"/>
+    <text class="hsm" x="22" y="40">Notification Center</text>
+    <text class="body" x="22" y="68">Automated SMTP email and</text>
+    <text class="body" x="22" y="90">SMS alerts for appointments,</text>
+    <text class="body" x="22" y="112">payment reminders, and</text>
+    <text class="body" x="22" y="134">document ready events.</text>
+  </g>
+
+  <g transform="translate(1138,812)">
+    <rect class="card cardGold" width="390" height="148" rx="16"/>
+    <text class="hsm" x="22" y="40">Attorney Admin &amp; Reporting</text>
+    <text class="body" x="22" y="68">Revenue reports, outstanding</text>
+    <text class="body" x="22" y="90">balances, content analytics,</text>
+    <text class="body" x="22" y="112">and case-load summaries.</text>
+    <text class="body" x="22" y="134">Exportable to CSV.</text>
+  </g>
+</svg>

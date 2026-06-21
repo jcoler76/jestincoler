@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* class-based dark mode: .dark on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f5f1;
+  --ink: #15140f;
+  --muted: #6f6c63;
+  --line: #ddd9cf;
+  --card: #fbfaf6;
+  --accent: #00b865;
+  --accent-ink: #064e2b;
+}
+
+.dark {
+  --bg: #0d100e;
+  --ink: #e9efe9;
+  --muted: #8a978c;
+  --line: #1d2622;
+  --card: #11161366;
+  --accent: #4ade80;
+  --accent-ink: #d8ffe9;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  background-image: radial-gradient(var(--line) 0.5px, transparent 0.5px);
+  background-size: 22px 22px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

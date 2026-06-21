@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Knowledge Base Ingestion and Nightly Curation</title>
+  <desc id="desc">Diagram showing how support and product data is ingested, embedded, and refined through a six-stage nightly curation pipeline into a curated, vector-searchable knowledge base.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7FAFC"/>
+      <stop offset="54%" stop-color="#F2F7FB"/>
+      <stop offset="100%" stop-color="#EEF6F1"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#123B5D"/>
+      <stop offset="58%" stop-color="#225E73"/>
+      <stop offset="100%" stop-color="#2F6F54"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#102A43" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#35657A"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2D7A55"/>
+    </marker>
+    <style>
+      .page { fill: url(#bg); }
+      .header { fill: url(#header); }
+      .title { font: 700 44px Arial, sans-serif; fill: #FFFFFF; }
+      .subtitle { font: 400 20px Arial, sans-serif; fill: #DDEBF2; }
+      .meta { font: 400 14px Arial, sans-serif; fill: #DDEBF2; }
+      .phaseLabel { font: 700 18px Arial, sans-serif; fill: #1F4E79; letter-spacing: 0.4px; }
+      .phaseRule { stroke: #9DB6C8; stroke-width: 2; }
+      .card { fill: #FFFFFF; stroke: #CAD8E3; stroke-width: 1.5; rx: 16; filter: url(#shadow); }
+      .cardBlue { fill: #F5FAFE; stroke: #B8D0E0; }
+      .cardGreen { fill: #F4FBF6; stroke: #B8DCC5; }
+      .cardGold { fill: #FFF9EA; stroke: #E5C875; }
+      .cardRed { fill: #FFF5F3; stroke: #E3B6AC; }
+      .num { font: 700 14px Arial, sans-serif; fill: #FFFFFF; }
+      .numCircle { fill: #1F4E79; }
+      .numCircleGreen { fill: #2D7A55; }
+      .numCircleGold { fill: #9A6B00; }
+      .h { font: 700 19px Arial, sans-serif; fill: #183B56; }
+      .hsm { font: 700 16px Arial, sans-serif; fill: #183B56; }
+      .body { font: 400 14px Arial, sans-serif; fill: #334E68; }
+      .small { font: 400 12.5px Arial, sans-serif; fill: #536B7B; }
+      .pill { fill: #E9F2F8; stroke: #B8D0E0; stroke-width: 1; rx: 13; }
+      .pillGreen { fill: #E9F7EE; stroke: #B8DCC5; }
+      .pillGold { fill: #FFF3CD; stroke: #E5C875; }
+      .pillText { font: 700 12px Arial, sans-serif; fill: #27485B; }
+      .arrow { fill: none; stroke: #35657A; stroke-width: 3; marker-end: url(#arrow); }
+      .arrowGreen { fill: none; stroke: #2D7A55; stroke-width: 3; marker-end: url(#arrowGreen); }
+      .band { fill: #17324D; rx: 18; filter: url(#shadow); }
+      .bandTitle { font: 700 19px Arial, sans-serif; fill: #FFFFFF; }
+      .bandText { font: 400 14px Arial, sans-serif; fill: #DDEBF2; }
+      .chip { fill: #21496B; rx: 13; }
+      .chipText { font: 700 13px Arial, sans-serif; fill: #EAF3FA; }
+      .stageNum { font: 700 13px Arial, sans-serif; fill: #2D7A55; }
+    </style>
+  </defs>
+
+  <rect class="page" x="0" y="0" width="1600" height="1050"/>
+  <rect class="header" x="0" y="0" width="1600" height="150"/>
+  <text class="title" x="70" y="72">Knowledge Base: Ingestion &amp; Nightly Curation</text>
+  <text class="subtitle" x="72" y="110">Raw support and product data becomes verified, vector-searchable knowledge through a self-cleaning pipeline that promotes what works and ages out what doesn't.</text>
+  <text class="meta" x="1300" y="58">Portfolio artifact</text>
+  <text class="meta" x="1300" y="84">Sanitized architecture view</text>
+
+  <!-- Phase labels -->
+  <text class="phaseLabel" x="70" y="193">1. Ingestion Sources</text>
+  <line class="phaseRule" x1="70" y1="206" x2="520" y2="206"/>
+  <text class="phaseLabel" x="70" y="496">2. Nightly Curation Pipeline &#183; 02:00 UTC</text>
+  <line class="phaseRule" x1="70" y1="509" x2="640" y2="509"/>
+  <text class="phaseLabel" x="70" y="858">3. Curated Retrieval</text>
+  <line class="phaseRule" x1="70" y1="871" x2="430" y2="871"/>
+
+  <!-- Ingestion source cards -->
+  <g transform="translate(70,232)">
+    <rect class="card cardBlue" width="272" height="128"/>
+    <text class="hsm" x="22" y="40">Front Conversations</text>
+    <text class="body" x="22" y="70">Daily polling of support</text>
+    <text class="body" x="22" y="92">threads and confirmed</text>
+    <text class="body" x="22" y="114">customer answers.</text>
+  </g>
+  <g transform="translate(364,232)">
+    <rect class="card cardBlue" width="272" height="128"/>
+    <text class="hsm" x="22" y="40">Jira Tickets</text>
+    <text class="body" x="22" y="70">Webhook-triggered</text>
+    <text class="body" x="22" y="92">ingestion of dev and</text>
+    <text class="body" x="22" y="114">support tickets.</text>
+  </g>
+  <g transform="translate(658,232)">
+    <rect class="card cardBlue" width="272" height="128"/>
+    <text class="hsm" x="22" y="40">Chat History</text>
+    <text class="body" x="22" y="70">Bulk migration of Front</text>
+    <text class="body" x="22" y="92">and Olark transcripts</text>
+    <text class="body" x="22" y="114">into chunks.</text>
+  </g>
+  <g transform="translate(952,232)">
+    <rect class="card cardBlue" width="272" height="128"/>
+    <text class="hsm" x="22" y="40">Page Anchors</text>
+    <text class="body" x="22" y="70">UI tutorials and page</text>
+    <text class="body" x="22" y="92">metadata from the app</text>
+    <text class="body" x="22" y="114">and VideoGen.</text>
+  </g>
+  <g transform="translate(1246,232)">
+    <rect class="card cardBlue" width="272" height="128"/>
+    <text class="hsm" x="22" y="40">Customer Knowledge</text>
+    <text class="body" x="22" y="70">Mined from confirmed</text>
+    <text class="body" x="22" y="92">answers and synthesized</text>
+    <text class="body" x="22" y="114">support patterns.</text>
+  </g>
+
+  <!-- arrows down to embed band -->
+  <path class="arrow" d="M 206 360 C 206 388, 206 396, 206 410"/>
+  <path class="arrow" d="M 500 360 C 500 388, 500 396, 500 410"/>
+  <path class="arrow" d="M 794 360 C 794 388, 794 396, 794 410"/>
+  <path class="arrow" d="M 1088 360 C 1088 388, 1088 396, 1088 410"/>
+  <path class="arrow" d="M 1382 360 C 1382 388, 1382 396, 1382 410"/>
+
+  <!-- embed/store band -->
+  <g transform="translate(70,412)">
+    <rect class="band" width="1448" height="62"/>
+    <text class="bandTitle" x="26" y="38">Normalize &#8594; Embed &#8594; Store</text>
+    <rect class="chip" x="372" y="16" width="312" height="30"/><text class="chipText" x="388" y="36">OpenAI text-embedding-3-large</text>
+    <rect class="chip" x="704" y="16" width="200" height="30"/><text class="chipText" x="720" y="36">SQLite + sqlite-vec</text>
+    <rect class="chip" x="924" y="16" width="260" height="30"/><text class="chipText" x="940" y="36">quality score + source trust</text>
+    <text class="bandText" x="1208" y="37">pgvector migration planned</text>
+  </g>
+
+  <!-- six-stage pipeline -->
+  <g transform="translate(70,540)">
+    <rect class="card cardGreen" width="225" height="148"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="23" y="35">1</text>
+    <text class="h" x="56" y="36">Dedup</text>
+    <text class="body" x="22" y="72">Marks near-duplicates</text>
+    <text class="body" x="22" y="94">(cosine &#8805; 0.95) as</text>
+    <text class="body" x="22" y="116">superseded via native</text>
+    <text class="body" x="22" y="138">KNN search.</text>
+  </g>
+  <g transform="translate(320,540)">
+    <rect class="card cardGreen" width="225" height="148"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="23" y="35">2</text>
+    <text class="h" x="56" y="36">Rescore</text>
+    <text class="body" x="22" y="72">Recomputes quality</text>
+    <text class="body" x="22" y="94">with source-trust</text>
+    <text class="body" x="22" y="116">weights: manual &gt;</text>
+    <text class="body" x="22" y="138">module &gt; Jira &gt; help.</text>
+  </g>
+  <g transform="translate(570,540)">
+    <rect class="card cardGreen" width="225" height="148"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="23" y="35">3</text>
+    <text class="h" x="56" y="36">Decay</text>
+    <text class="body" x="22" y="72">Ages out unused</text>
+    <text class="body" x="22" y="94">content &#8212; multiplies</text>
+    <text class="body" x="22" y="116">quality by 0.9 after</text>
+    <text class="body" x="22" y="138">90 days idle.</text>
+  </g>
+  <g transform="translate(820,540)">
+    <rect class="card cardGreen" width="225" height="148"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="23" y="35">4</text>
+    <text class="h" x="56" y="36">Promote</text>
+    <text class="body" x="22" y="72">Transitions chunks</text>
+    <text class="body" x="22" y="94">across the lifecycle,</text>
+    <text class="body" x="22" y="116">or demotes anything</text>
+    <text class="body" x="22" y="138">below threshold.</text>
+  </g>
+  <g transform="translate(1070,540)">
+    <rect class="card cardGreen" width="225" height="148"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="23" y="35">5</text>
+    <text class="h" x="56" y="36">Patterns</text>
+    <text class="body" x="22" y="72">Clusters curated</text>
+    <text class="body" x="22" y="94">solutions (sim &#8805; 0.82)</text>
+    <text class="body" x="22" y="116">into canonical</text>
+    <text class="body" x="22" y="138">answer patterns.</text>
+  </g>
+  <g transform="translate(1320,540)">
+    <rect class="card cardGold" width="225" height="148"/>
+    <circle class="numCircleGold" cx="28" cy="30" r="16"/><text class="num" x="23" y="35">6</text>
+    <text class="h" x="56" y="36">Reinforce</text>
+    <text class="body" x="22" y="72">Flags contradictions</text>
+    <text class="body" x="22" y="94">(conf &#8805; 0.7) for human</text>
+    <text class="body" x="22" y="116">review; updates rule</text>
+    <text class="body" x="22" y="138">evidence counts.</text>
+  </g>
+
+  <!-- inter-stage arrows -->
+  <path class="arrowGreen" d="M 295 614 C 305 614, 310 614, 320 614"/>
+  <path class="arrowGreen" d="M 545 614 C 555 614, 560 614, 570 614"/>
+  <path class="arrowGreen" d="M 795 614 C 805 614, 810 614, 820 614"/>
+  <path class="arrowGreen" d="M 1045 614 C 1055 614, 1060 614, 1070 614"/>
+  <path class="arrowGreen" d="M 1295 614 C 1305 614, 1310 614, 1320 614"/>
+
+  <!-- lifecycle band -->
+  <path class="arrow" d="M 800 688 C 800 706, 800 712, 800 724"/>
+  <g transform="translate(70,726)">
+    <rect class="band" width="1448" height="104"/>
+    <text class="bandTitle" x="26" y="36">Content lifecycle</text>
+    <rect class="chip" x="26" y="54" width="150" height="32"/><text class="chipText" x="44" y="75">raw</text>
+    <text class="bandText" x="186" y="76">&#8594;</text>
+    <rect class="chip" x="214" y="54" width="250" height="32"/><text class="chipText" x="232" y="75">curated &#183; quality &#8805; 60</text>
+    <text class="bandText" x="476" y="76">&#8594;</text>
+    <rect class="chip" x="504" y="54" width="372" height="32"/><text class="chipText" x="522" y="75">verified &#183; &#8805; 10 retrievals &amp; quality &#8805; 75</text>
+    <rect class="chip" x="932" y="54" width="232" height="32" fill="#5A2533"/><text class="chipText" x="950" y="75">demoted &#183; quality &lt; 30</text>
+    <rect class="chip" x="1180" y="54" width="160" height="32" fill="#5A2533"/><text class="chipText" x="1198" y="75">superseded</text>
+    <text class="bandText" x="1356" y="76">hidden</text>
+  </g>
+
+  <!-- retrieval consumers -->
+  <path class="arrowGreen" d="M 250 830 C 250 858, 250 878, 250 898"/>
+  <g transform="translate(70,900)">
+    <rect class="card cardBlue" width="340" height="118"/>
+    <text class="hsm" x="22" y="40">/chat &amp; /ask</text>
+    <text class="body" x="22" y="70">RAG answers for customers and</text>
+    <text class="body" x="22" y="92">developers, audience-filtered.</text>
+  </g>
+  <g transform="translate(440,900)">
+    <rect class="card cardBlue" width="340" height="118"/>
+    <text class="hsm" x="22" y="40">Triage &amp; Agents</text>
+    <text class="body" x="22" y="70">Ticket assistant and publishing</text>
+    <text class="body" x="22" y="92">agents pull trusted context.</text>
+  </g>
+  <g transform="translate(810,900)">
+    <rect class="card cardBlue" width="340" height="118"/>
+    <text class="hsm" x="22" y="40">Dev Deep Dive</text>
+    <text class="body" x="22" y="70">Feeds ticket analysis and the</text>
+    <text class="body" x="22" y="92">auto-fix PR workflow.</text>
+  </g>
+  <g transform="translate(1180,900)">
+    <rect class="card cardGreen" width="338" height="118"/>
+    <text class="hsm" x="22" y="40">Live Guarantee</text>
+    <text class="body" x="22" y="70">All search defaults to</text>
+    <text class="body" x="22" y="92">curatedOnly = true.</text>
+  </g>
+</svg>

@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+  <title id="title">AI Support Triage Agent</title>
+  <desc id="desc">Diagram of an AI support assistant that assembles trusted context, classifies ticket intent, asks clarifying questions, routes to the right team, and executes scoped actions with a full audit trail.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7FAFC"/>
+      <stop offset="54%" stop-color="#F2F7FB"/>
+      <stop offset="100%" stop-color="#EEF6F1"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#123B5D"/>
+      <stop offset="58%" stop-color="#225E73"/>
+      <stop offset="100%" stop-color="#2F6F54"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#102A43" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#35657A"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2D7A55"/>
+    </marker>
+    <style>
+      .page { fill: url(#bg); }
+      .header { fill: url(#header); }
+      .title { font: 700 44px Arial, sans-serif; fill: #FFFFFF; }
+      .subtitle { font: 400 20px Arial, sans-serif; fill: #DDEBF2; }
+      .meta { font: 400 14px Arial, sans-serif; fill: #DDEBF2; }
+      .phaseLabel { font: 700 18px Arial, sans-serif; fill: #1F4E79; letter-spacing: 0.4px; }
+      .phaseRule { stroke: #9DB6C8; stroke-width: 2; }
+      .card { fill: #FFFFFF; stroke: #CAD8E3; stroke-width: 1.5; rx: 16; filter: url(#shadow); }
+      .cardBlue { fill: #F5FAFE; stroke: #B8D0E0; }
+      .cardGreen { fill: #F4FBF6; stroke: #B8DCC5; }
+      .cardGold { fill: #FFF9EA; stroke: #E5C875; }
+      .num { font: 700 14px Arial, sans-serif; fill: #FFFFFF; }
+      .numCircle { fill: #1F4E79; }
+      .numCircleGreen { fill: #2D7A55; }
+      .numCircleGold { fill: #9A6B00; }
+      .h { font: 700 19px Arial, sans-serif; fill: #183B56; }
+      .hsm { font: 700 16px Arial, sans-serif; fill: #183B56; }
+      .body { font: 400 14px Arial, sans-serif; fill: #334E68; }
+      .small { font: 400 12.5px Arial, sans-serif; fill: #536B7B; }
+      .pill { fill: #E9F2F8; stroke: #B8D0E0; stroke-width: 1; rx: 13; }
+      .pillGreen { fill: #E9F7EE; stroke: #B8DCC5; }
+      .pillGold { fill: #FFF3CD; stroke: #E5C875; }
+      .pillText { font: 700 12.5px Arial, sans-serif; fill: #27485B; }
+      .arrow { fill: none; stroke: #35657A; stroke-width: 3; marker-end: url(#arrow); }
+      .arrowGreen { fill: none; stroke: #2D7A55; stroke-width: 3; marker-end: url(#arrowGreen); }
+      .band { fill: #17324D; rx: 18; filter: url(#shadow); }
+      .bandTitle { font: 700 19px Arial, sans-serif; fill: #FFFFFF; }
+      .bandText { font: 400 14px Arial, sans-serif; fill: #DDEBF2; }
+      .chip { fill: #21496B; rx: 13; }
+      .chipText { font: 700 13px Arial, sans-serif; fill: #EAF3FA; }
+    </style>
+  </defs>
+
+  <rect class="page" x="0" y="0" width="1600" height="1050"/>
+  <rect class="header" x="0" y="0" width="1600" height="150"/>
+  <text class="title" x="70" y="72">AI Support Triage Agent</text>
+  <text class="subtitle" x="72" y="110">Reads each support ticket against trusted context, classifies intent, routes it to the right team, and executes scoped actions &#8212; with confidence gates and a full audit trail.</text>
+  <text class="meta" x="1300" y="58">Portfolio artifact</text>
+  <text class="meta" x="1300" y="84">Powered by Claude</text>
+
+  <!-- Phase 1 -->
+  <text class="phaseLabel" x="70" y="193">1. Intake &amp; Context</text>
+  <line class="phaseRule" x1="70" y1="206" x2="520" y2="206"/>
+
+  <g transform="translate(70,222)">
+    <rect class="card cardBlue" width="262" height="146"/>
+    <circle class="numCircle" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">1</text>
+    <text class="h" x="56" y="36">Incoming Ticket</text>
+    <text class="body" x="22" y="72">New support ticket with</text>
+    <text class="body" x="22" y="94">subject, body, customer,</text>
+    <text class="body" x="22" y="116">and tenant database</text>
+    <text class="body" x="22" y="138">context.</text>
+  </g>
+  <path class="arrow" d="M 332 295 C 350 295, 358 295, 374 295"/>
+
+  <g transform="translate(374,222)">
+    <rect class="card" width="558" height="146"/>
+    <circle class="numCircle" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">2</text>
+    <text class="h" x="56" y="36">Context Assembly (RAG)</text>
+    <text class="body" x="22" y="72">Vector search over training chunks &#8212; tickets, procedures,</text>
+    <text class="body" x="22" y="94">business rules, learned knowledge, pattern library.</text>
+    <rect class="pill" x="22" y="108" width="190" height="26"/><text class="pillText" x="37" y="126">SQL schema introspection</text>
+    <rect class="pill" x="222" y="108" width="160" height="26"/><text class="pillText" x="237" y="126">nav-bar structure</text>
+    <rect class="pill" x="392" y="108" width="142" height="26"/><text class="pillText" x="407" y="126">business rules</text>
+  </g>
+  <path class="arrowGreen" d="M 932 295 C 950 295, 958 295, 974 295"/>
+
+  <g transform="translate(974,222)">
+    <rect class="card cardGreen" width="480" height="146"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">3</text>
+    <text class="h" x="56" y="36">Claude Reasoning</text>
+    <text class="body" x="22" y="72">Claude builds a per-message system prompt</text>
+    <text class="body" x="22" y="94">from assembled context and drafts a grounded,</text>
+    <text class="body" x="22" y="116">cited response with suggested next steps.</text>
+  </g>
+
+  <!-- Phase 2 -->
+  <text class="phaseLabel" x="70" y="424">2. Classify &amp; Decide</text>
+  <line class="phaseRule" x1="70" y1="437" x2="520" y2="437"/>
+
+  <path class="arrowGreen" d="M 600 368 C 600 392, 600 430, 600 452"/>
+
+  <g transform="translate(70,454)">
+    <rect class="card cardGreen" width="800" height="148"/>
+    <circle class="numCircleGreen" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">4</text>
+    <text class="h" x="56" y="36">Intent Classification</text>
+    <text class="body" x="22" y="70">Each ticket is sorted into one of five intent classes that drive routing:</text>
+    <rect class="pill pillGreen" x="22" y="86" width="138" height="30"/><text class="pillText" x="37" y="106">answerable</text>
+    <rect class="pill pillGreen" x="172" y="86" width="158" height="30"/><text class="pillText" x="187" y="106">data-request</text>
+    <rect class="pill pillGreen" x="342" y="86" width="178" height="30"/><text class="pillText" x="357" y="106">troubleshooting</text>
+    <rect class="pill pillGreen" x="532" y="86" width="152" height="30"/><text class="pillText" x="547" y="106">bug-report</text>
+    <rect class="pill pillGold" x="22" y="124" width="200" height="30"/><text class="pillText" x="37" y="144">insufficient-info</text>
+    <text class="small" x="236" y="144">low confidence &#8594; ask a clarifying question instead of guessing</text>
+  </g>
+  <path class="arrow" d="M 870 528 C 888 528, 896 528, 912 528"/>
+
+  <g transform="translate(912,454)">
+    <rect class="card cardGold" width="542" height="148"/>
+    <circle class="numCircleGold" cx="28" cy="30" r="16"/><text class="num" x="24" y="35">5</text>
+    <text class="h" x="56" y="36">Confidence + Safety Gate</text>
+    <text class="body" x="22" y="72">Scores confidence; below threshold it posts a clarifying</text>
+    <text class="body" x="22" y="94">question or skips rather than sending a weak answer.</text>
+    <rect class="pill pillGold" x="22" y="108" width="178" height="26"/><text class="pillText" x="37" y="126">clarify before act</text>
+    <rect class="pill pillGold" x="210" y="108" width="150" height="26"/><text class="pillText" x="225" y="126">human override</text>
+  </g>
+
+  <!-- Phase 3 -->
+  <text class="phaseLabel" x="70" y="654">3. Route, Respond &amp; Act</text>
+  <line class="phaseRule" x1="70" y1="667" x2="560" y2="667"/>
+
+  <path class="arrowGreen" d="M 470 602 C 470 626, 470 658, 470 684"/>
+
+  <!-- Routing row -->
+  <g transform="translate(70,686)">
+    <rect class="card cardBlue" width="330" height="120"/>
+    <text class="hsm" x="22" y="38">Route &#183; escalationPath</text>
+    <text class="body" x="22" y="68">Directs to the owning team:</text>
+    <text class="body" x="22" y="90">Data Servicing, Marketing</text>
+    <text class="body" x="22" y="112">Manager, Digital Studio, +more.</text>
+  </g>
+  <g transform="translate(420,686)">
+    <rect class="card cardGreen" width="330" height="120"/>
+    <text class="hsm" x="22" y="38">Respond</text>
+    <text class="body" x="22" y="68">Posts a grounded answer with</text>
+    <text class="body" x="22" y="90">source citations, or hands off</text>
+    <text class="body" x="22" y="112">to the routed team.</text>
+  </g>
+  <g transform="translate(770,686)">
+    <rect class="card cardGreen" width="684" height="120"/>
+    <text class="hsm" x="22" y="38">Execute scoped actions</text>
+    <rect class="pill pillGreen" x="22" y="58" width="190" height="34"/><text class="pillText" x="40" y="80">Schedule Callback</text>
+    <rect class="pill pillGreen" x="226" y="58" width="232" height="34"/><text class="pillText" x="244" y="80">Add to Contact Group</text>
+    <rect class="pill pillGreen" x="472" y="58" width="160" height="34"/><text class="pillText" x="490" y="80">Export CSV</text>
+    <text class="small" x="22" y="108">Actions run against the tenant database through reviewed, parameterized procedures.</text>
+  </g>
+
+  <!-- Audit band -->
+  <path class="arrow" d="M 800 806 C 800 824, 800 836, 800 850"/>
+  <g transform="translate(70,852)">
+    <rect class="band" width="1384" height="120"/>
+    <text class="bandTitle" x="28" y="40">Audit panel</text>
+    <text class="bandText" x="28" y="74">Every Each response is logged with its intent, escalation path, and outcome &#8212;</text>
+    <text class="bandText" x="28" y="98">making the assistant reviewable and its accuracy measurable over time.</text>
+    <rect class="chip" x="900" y="34" width="130" height="32"/><text class="chipText" x="924" y="55">posted</text>
+    <rect class="chip" x="1042" y="34" width="120" height="32" fill="#5A2533"/><text class="chipText" x="1066" y="55">failed</text>
+    <rect class="chip" x="1174" y="34" width="130" height="32" fill="#5A4A18"/><text class="chipText" x="1196" y="55">skipped</text>
+    <rect class="chip" x="900" y="76" width="404" height="32"/><text class="chipText" x="924" y="97">SQLite training store &#183; per-agent (general, media-mate)</text>
+  </g>
+</svg>
