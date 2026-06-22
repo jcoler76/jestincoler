@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTerminal, PROMPT } from "./useTerminal";
 import { applyTheme } from "@/lib/theme";
+import { emitSessionEvent } from "@/lib/events";
 import SnakeGame from "./snake/SnakeGame";
 
 const BANNER = [
@@ -29,6 +30,7 @@ export default function Terminal() {
   const openRef = useRef(open);
   useEffect(() => {
     openRef.current = open;
+    if (open) emitSessionEvent("terminal_opened", "");
   }, [open]);
 
   const onNavigate = useCallback(

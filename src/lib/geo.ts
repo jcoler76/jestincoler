@@ -2,6 +2,9 @@ export interface Geo {
   city?: string;
   region?: string;
   country?: string;
+  latitude?: string;
+  longitude?: string;
+  timezone?: string;
 }
 
 function decode(value: string | null): string | undefined {
@@ -19,5 +22,8 @@ export function getGeo(headers: Headers): Geo {
     city: decode(headers.get("x-vercel-ip-city")),
     region: decode(headers.get("x-vercel-ip-country-region")),
     country: decode(headers.get("x-vercel-ip-country")),
+    latitude: decode(headers.get("x-vercel-ip-latitude")),
+    longitude: decode(headers.get("x-vercel-ip-longitude")),
+    timezone: decode(headers.get("x-vercel-ip-timezone")),
   };
 }

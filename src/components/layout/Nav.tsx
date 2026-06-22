@@ -15,6 +15,13 @@ export default function Nav() {
         <Link href="/#work" className="text-muted hover:text-ink transition-colors">work</Link>
         <Link href="/#play" className="text-muted hover:text-ink transition-colors">playground</Link>
         <Link href="/about" className="text-muted hover:text-ink transition-colors">whoami</Link>
+        <Link
+          href="/live"
+          className="flex items-center gap-1.5 text-muted hover:text-ink transition-colors"
+        >
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" aria-hidden="true" />
+          live
+        </Link>
         <button
           onClick={openTerminal}
           aria-label="Open terminal"

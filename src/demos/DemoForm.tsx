@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type InputHTMLAttributes } from "react";
+import { emitSessionEvent } from "@/lib/events";
 
 interface DemoFormProps {
   slug: string;
@@ -18,6 +19,7 @@ export default function DemoForm({ slug, field, placeholder, idleLabel, loadingL
   const [loading, setLoading] = useState(false);
 
   async function run() {
+    emitSessionEvent("demo_run", slug);
     setLoading(true);
     setError("");
     setOutput("");

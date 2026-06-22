@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { commands } from "./commands";
 import type { CommandContext } from "./commands/types";
+import { emitSessionEvent } from "@/lib/events";
 
 export interface TermLine {
   id: number;
@@ -53,7 +54,10 @@ export function useTerminal({ onNavigate, onSetTheme, onOpenUrl, onLaunch }: Opt
         buffer = [];
         didClear = true;
       },
-      setTheme: (t) => onSetThemeRef.current(t),
+      setTheme: (t) => {
+        emitSessionEvent("theme_changed", t);
+        onSetThemeRef.current(t);
+      },
       navigate: (p) => onNavigateRef.current(p),
       openUrl: (u) => onOpenUrlRef.current?.(u),
       launch: (a) => onLaunchRef.current?.(a),
@@ -62,8 +66,10 @@ export function useTerminal({ onNavigate, onSetTheme, onOpenUrl, onLaunch }: Opt
 
     const [name, ...args] = input.split(/\s+/);
     const cmd = commands[name.toLowerCase()];
-    if (cmd) cmd.run(args, ctx);
-    else {
+    if (cmd) {
+      emitSessionEvent("command", name.toLowerCase());
+      cmd.run(args, ctx);
+    } else {
       push(`command not found: ${name} (try: help)`, "output");
       push("", "output");
     }
