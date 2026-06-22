@@ -13,7 +13,7 @@ export default function Hero() {
       </h1>
       <p className="mt-6 text-[19px] text-muted">
         I design and ship agentic AI — RAG pipelines, autonomous dev agents, and self-healing
-        test suites — that run in production. I also build NectarStudio. Press{" "}
+        test suites — that run in production. Press{" "}
         <code className="rounded bg-line px-1.5 py-0.5 font-mono text-[0.9em] text-ink">~</code>{" "}
         anywhere to open a terminal and look around.
       </p>
