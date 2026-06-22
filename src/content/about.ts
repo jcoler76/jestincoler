@@ -32,7 +32,7 @@ export const about: AboutContent = {
   whoami: [
     { key: "name", value: "Jestin Coler" },
     { key: "role", value: "AI Solutions Architect & Data Systems Builder at Mirabel Technologies" },
-    { key: "also", value: "Founder, NectarStudio" },
+    { key: "also", value: "Creator, NectarStudio" },
     { key: "building", value: "applied AI for enterprise software" },
     { key: "based", value: "Remote · Indiana" },
   ],

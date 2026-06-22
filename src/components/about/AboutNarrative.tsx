@@ -30,7 +30,7 @@ export default function AboutNarrative() {
           </Link>
         </p>
         <p>
-          I&apos;m also the founder of <b>NectarStudio</b>, where I build AI products end to end, from
+          I also build <b>NectarStudio</b>, where I ship AI products end to end, from
           the database and API to the workflow engine and UI.
         </p>
         <p>

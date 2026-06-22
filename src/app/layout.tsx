@@ -7,12 +7,12 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jestin Coler — builder, founder, AI engineer",
+  title: "Jestin Coler — builder, tinkerer, AI engineer",
   description:
     "I design and ship agentic AI systems that do real work. Portfolio, projects, and an AI playground.",
   metadataBase: new URL("https://jestincoler.com"),
   openGraph: {
-    title: "Jestin Coler — builder, founder, AI engineer",
+    title: "Jestin Coler — builder, tinkerer, AI engineer",
     description:
       "I design and ship agentic AI systems that do real work. Portfolio, projects, and an AI playground.",
     url: "https://jestincoler.com",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jestin Coler — builder, founder, AI engineer",
+    title: "Jestin Coler — builder, tinkerer, AI engineer",
     description:
       "I design and ship agentic AI systems that do real work. Portfolio, projects, and an AI playground.",
   },

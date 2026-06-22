@@ -7,6 +7,6 @@ describe("WhoamiBlock", () => {
     render(<WhoamiBlock />);
     expect(screen.getByText("whoami", { exact: false })).toBeInTheDocument();
     expect(screen.getByText(/Jestin Coler/)).toBeInTheDocument();
-    expect(screen.getByText(/Founder, NectarStudio/i)).toBeInTheDocument();
+    expect(screen.getByText(/Creator, NectarStudio/i)).toBeInTheDocument();
   });
 });

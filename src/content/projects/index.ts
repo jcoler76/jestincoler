@@ -114,11 +114,11 @@ export const projects: Project[] = [
     slug: "nectarstudio",
     title: "NectarStudio",
     blurb:
-      "An AI-powered iPaaS I founded — bulk-generate governed REST/GraphQL APIs and build automation workflows, multi-tenant. Live.",
+      "An AI-powered iPaaS I designed and built — bulk-generate governed REST/GraphQL APIs and build automation workflows, multi-tenant. Live.",
     tags: ["Claude", "iPaaS", "React", "Postgres"],
-    role: "Founder — design, build & deploy",
+    role: "Creator — design, build & deploy",
     summary: [
-      "NectarStudio is an AI-powered iPaaS (integration platform-as-a-service) I founded. It turns a customer's data sources into governed REST and GraphQL APIs — generated in bulk — with a visual workflow builder layered on top, all multi-tenant.",
+      "NectarStudio is an AI-powered iPaaS (integration platform-as-a-service) I designed and built. It turns a customer's data sources into governed REST and GraphQL APIs — generated in bulk — with a visual workflow builder layered on top, all multi-tenant.",
       "An AI layer (Claude) accelerates the platform: it drafts API endpoints from a schema and assembles automation workflows from a plain-language description, so teams stand up integrations in minutes instead of weeks.",
       "It's built as a set of services — a customer-facing core app, a marketing/lead service, and an admin portal — over a multi-tenant PostgreSQL database, with authentication, Stripe billing, and rate limiting. The demos below show two of its signature flows.",
     ],
