@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#15140f"/>
-  <path d="M20 22 L31 32 L20 42" stroke="#00b865" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="34" y="40" width="14" height="6" rx="3" fill="#00b865"/>
+  <circle cx="32" cy="32" r="31" fill="#4a7e80"/>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#f3ecdd" stroke-width="1.6"/>
+  <circle cx="32" cy="32" r="24.5" fill="none" stroke="#f3ecdd" stroke-width="0.9"/>
+  <text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-family="Rockwell, Georgia, 'Times New Roman', serif" font-weight="700" font-size="27" fill="#6e4a36">JC</text>
 </svg>
