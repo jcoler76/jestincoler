@@ -20,6 +20,13 @@ export default function AboutNarrative() {
           SaaS platform.
         </p>
         <p>
+          A lot of the role is consultative. I meet directly with publishers to understand their
+          pain points, then design and build <b>custom solutions</b> for them: bespoke reports,
+          tailored workflows, and integrations with third-party systems. I also help shape where the
+          platform goes next, partnering with executive leadership on its technical direction
+          and roadmap.
+        </p>
+        <p>
           My recent work makes institutional knowledge usable at scale: a self-service API platform
           with a visual workflow builder, an AI-assisted regression-testing suite with DB-level
           assertions and self-healing tests, a retrieval-augmented knowledge assistant that curates
