@@ -2,6 +2,11 @@
   "name": "jestincoler",
   "version": "0.1.0",
   "private": true,
+  "description": "Jestin Coler's AI-engineer portfolio — jestincoler.com",
+  "author": "Jestin Coler",
+  "license": "UNLICENSED",
+  "homepage": "https://jestincoler.com",
+  "repository": { "type": "git", "url": "https://github.com/jcoler76/jestincoler" },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

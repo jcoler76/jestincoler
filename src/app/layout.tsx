@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: "Jestin Coler — builder, founder, AI engineer",
   description:
     "I design and ship agentic AI systems that do real work. Portfolio, projects, and an AI playground.",
+  metadataBase: new URL("https://jestincoler.com"),
+  openGraph: {
+    title: "Jestin Coler — builder, founder, AI engineer",
+    description:
+      "I design and ship agentic AI systems that do real work. Portfolio, projects, and an AI playground.",
+    url: "https://jestincoler.com",
+    siteName: "jestincoler.com",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jestin Coler — builder, founder, AI engineer",
+    description:
+      "I design and ship agentic AI systems that do real work. Portfolio, projects, and an AI playground.",
+  },
 };
 
 // Light is the intentional default (the professional canvas); dark is opt-in via the
