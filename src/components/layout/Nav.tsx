@@ -15,6 +15,7 @@ export default function Nav() {
         <Link href="/#work" className="text-muted hover:text-ink transition-colors">work</Link>
         <Link href="/#play" className="text-muted hover:text-ink transition-colors">playground</Link>
         <Link href="/about" className="text-muted hover:text-ink transition-colors">whoami</Link>
+        <Link href="/ask" className="text-muted hover:text-ink transition-colors">ask</Link>
         <Link
           href="/live"
           className="flex items-center gap-1.5 text-muted hover:text-ink transition-colors"
