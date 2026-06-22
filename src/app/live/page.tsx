@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import LiveInspector from "@/components/live/LiveInspector";
+import { WORLD_MAP } from "@/lib/worldMap";
 
 export const metadata: Metadata = {
   title: "Live — Jestin Coler",
@@ -22,9 +23,9 @@ export default function LivePage() {
       <p className="mt-4 max-w-[60ch] text-[16.5px] leading-[1.7] text-ink/90">
         Everything I ship is observable, so this page turns the lens on you. It is all real and
         all ephemeral: events stay in your browser and vanish on reload, with no cookies and
-        nothing stored. The only network call is a single IP-geo lookup.
+        nothing stored. The only request that inspects you is a single IP-geo lookup.
       </p>
-      <LiveInspector />
+      <LiveInspector map={WORLD_MAP} />
       <Footer />
     </main>
   );

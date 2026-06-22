@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSessionEvents } from "@/lib/events";
+import type { WorldMap } from "@/lib/worldMap";
 import GeoPanel from "./GeoPanel";
 import DevicePanel from "./DevicePanel";
 import EventFeed from "./EventFeed";
@@ -44,7 +45,7 @@ const EMPTY_CLIENT: ClientFacts = {
   referrer: null,
 };
 
-export default function LiveInspector() {
+export default function LiveInspector({ map }: { map?: WorldMap }) {
   const events = useSessionEvents();
   const [facts, setFacts] = useState<ServerFacts>(EMPTY);
   const [client, setClient] = useState<ClientFacts>(EMPTY_CLIENT);
@@ -93,6 +94,7 @@ export default function LiveInspector() {
           country={facts.country}
           latitude={facts.latitude}
           longitude={facts.longitude}
+          map={map}
         />
         <DevicePanel
           os={facts.os}
