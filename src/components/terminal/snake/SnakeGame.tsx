@@ -26,9 +26,9 @@ function draw(state: SnakeState): string {
     let line = "";
     for (let x = 0; x < state.cols; x++) {
       const k = `${x},${y}`;
-      if (cell.get(k) === "head") line += "█";
-      else if (cell.get(k) === "body") line += "▓";
-      else if (state.food.x === x && state.food.y === y) line += "●";
+      if (cell.get(k) === "head") line += "●";
+      else if (cell.get(k) === "body") line += "■";
+      else if (state.food.x === x && state.food.y === y) line += "◆";
       else line += "·";
     }
     rows.push(line);

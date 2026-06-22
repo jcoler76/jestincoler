@@ -17,6 +17,7 @@ import { echo } from "./echo";
 import { date } from "./date";
 import { neofetch } from "./neofetch";
 import { live } from "./live";
+import { ask } from "./ask";
 import { makeMan } from "./man";
 import { makeHelp } from "./help";
 
@@ -38,6 +39,7 @@ const list: Command[] = [
   neofetch,
   snake,
   live,
+  ask,
   clear,
 ];
 

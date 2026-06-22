@@ -68,6 +68,12 @@ describe("terminal commands", () => {
     expect(ctx.navigate).toHaveBeenCalledWith("/live");
   });
 
+  it("ask navigates to /ask", () => {
+    const ctx = makeCtx();
+    commands.ask.run([], ctx);
+    expect(ctx.navigate).toHaveBeenCalledWith("/ask");
+  });
+
   it("resume opens the PDF", () => {
     const ctx = makeCtx();
     commands.resume.run([], ctx);

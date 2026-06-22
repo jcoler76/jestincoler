@@ -11,7 +11,7 @@ export default function Hero() {
         I build AI systems that do real work
         <span className="ml-1 inline-block h-[1em] w-[0.55ch] translate-y-[0.12em] animate-pulse bg-accent" />
       </h1>
-      <p className="mt-6 max-w-[56ch] text-[19px] text-muted">
+      <p className="mt-6 text-[19px] text-muted">
         I design and ship agentic AI — RAG pipelines, autonomous dev agents, and self-healing
         test suites — that run in production. I also build NectarStudio. Press{" "}
         <code className="rounded bg-line px-1.5 py-0.5 font-mono text-[0.9em] text-ink">~</code>{" "}
