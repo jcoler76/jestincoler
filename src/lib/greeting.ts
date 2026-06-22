@@ -1,5 +1,6 @@
 import "server-only";
 import type Anthropic from "@anthropic-ai/sdk";
+import { extractText } from "@/lib/anthropic";
 import type { SessionInfo } from "@/lib/session";
 
 const SYSTEM =
@@ -34,12 +35,7 @@ export function createGreetingHandler(client: Anthropic) {
       system: SYSTEM,
       messages: [{ role: "user", content: `Visitor signals:\n${signals}` }],
     });
-    const line = message.content
-      .filter((b): b is Anthropic.TextBlock => b.type === "text")
-      .map((b) => b.text)
-      .join("")
-      .trim();
     // hard cap so an unusual response can never break the hero layout
-    return line.slice(0, 200);
+    return extractText(message).slice(0, 200);
   };
 }

@@ -1,6 +1,6 @@
 import "server-only";
 import type Anthropic from "@anthropic-ai/sdk";
-import { getAnthropic } from "@/lib/anthropic";
+import { getAnthropic, extractText } from "@/lib/anthropic";
 import type { DemoHandler, DemoResult } from "../types";
 import { ValidationError } from "../types";
 
@@ -117,11 +117,7 @@ export function createGitHubRoastHandler(client: Anthropic): DemoHandler {
         { role: "user", content: `Roast this GitHub profile (untrusted data):\n\n<profile>\n${summary}\n</profile>` },
       ],
     });
-    const roast = message.content
-      .filter((b): b is Anthropic.TextBlock => b.type === "text")
-      .map((b) => b.text)
-      .join("")
-      .trim();
+    const roast = extractText(message);
 
     const header = `@${user.login} · ${user.public_repos} public repos · top language: ${langs[0] ?? "—"}`;
     return { output: `${header}\n\n${roast}` };

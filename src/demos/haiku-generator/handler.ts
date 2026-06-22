@@ -1,6 +1,6 @@
 import "server-only";
 import type Anthropic from "@anthropic-ai/sdk";
-import { getAnthropic } from "@/lib/anthropic";
+import { getAnthropic, extractText } from "@/lib/anthropic";
 import type { DemoHandler, DemoResult } from "../types";
 import { ValidationError } from "../types";
 
@@ -28,11 +28,7 @@ export function createHaikuHandler(client: Anthropic): DemoHandler {
       system: SYSTEM,
       messages: [{ role: "user", content: topic }],
     });
-    const output = message.content
-      .filter((b): b is Anthropic.TextBlock => b.type === "text")
-      .map((b) => b.text)
-      .join("")
-      .trim();
+    const output = extractText(message);
     return { output };
   };
 }

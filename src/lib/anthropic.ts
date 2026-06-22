@@ -15,3 +15,11 @@ export function getAnthropic(): Anthropic {
   }
   return client;
 }
+
+export function extractText(message: Anthropic.Message): string {
+  return message.content
+    .filter((b): b is Anthropic.TextBlock => b.type === "text")
+    .map((b) => b.text)
+    .join("")
+    .trim();
+}
