@@ -41,11 +41,11 @@ export default function GeoPanel({ city, region, country, latitude, longitude, m
             <path d={map.landPath} className="fill-line/70 stroke-line" strokeWidth={0.4} />
             {dot && (
               <>
-                <circle cx={dot.x} cy={dot.y} r={14} className="fill-accent/20">
-                  <animate attributeName="r" values="8;20;8" dur="2.4s" repeatCount="indefinite" />
-                  <animate attributeName="opacity" values="0.5;0;0.5" dur="2.4s" repeatCount="indefinite" />
+                <circle cx={dot.x} cy={dot.y} r={20} className="fill-accent/20">
+                  <animate attributeName="r" values="18;48;18" dur="2.4s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0.45;0;0.45" dur="2.4s" repeatCount="indefinite" />
                 </circle>
-                <circle cx={dot.x} cy={dot.y} r={5} className="fill-accent" />
+                <circle cx={dot.x} cy={dot.y} r={16} className="fill-accent stroke-bg" strokeWidth={3} />
               </>
             )}
           </svg>

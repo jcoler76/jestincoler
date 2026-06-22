@@ -20,10 +20,10 @@ export default function LivePage() {
       <h1 className="text-[clamp(28px,4.5vw,40px)] font-[680] leading-[1.1] tracking-[-0.025em]">
         Your session, live.
       </h1>
-      <p className="mt-4 max-w-[60ch] text-[16.5px] leading-[1.7] text-ink/90">
-        Everything I ship is observable, so this page turns the lens on you. It is all real and
-        all ephemeral: events stay in your browser and vanish on reload, with no cookies and
-        nothing stored. The only request that inspects you is a single IP-geo lookup.
+      <p className="mt-4 text-[16.5px] leading-[1.7] text-ink/90">
+        Everything I ship is observable, so this page turns the lens on you. Events stay in your
+        browser and vanish on reload, with no cookies and nothing stored. The only request that
+        inspects you is a single IP-geo lookup.
       </p>
       <LiveInspector map={WORLD_MAP} />
       <Footer />
