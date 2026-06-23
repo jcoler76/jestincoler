@@ -4,6 +4,7 @@ import "./globals.css";
 import Terminal from "@/components/terminal/Terminal";
 import RouteTracker from "@/components/layout/RouteTracker";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Terminal />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
